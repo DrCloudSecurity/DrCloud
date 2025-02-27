@@ -12,11 +12,20 @@ My compendium of artifacts for IaC, AI/ML, Splunk, Docker, Python.
 AI/ML
 <br/>
 
+[IaC](https://github.com/DrCloudSecurity/DrCloud/tree/main/IaC)
+<br/>
+
 Splunk
 <br/>
 
 CDK/Terraform
 <br/>
 
-Python
+[Python](https://github.com/DrCloudSecurity/DrCloud/tree/main/python)
+<br/>
+
+Splunk
+<br/>
+
+CDK/Terraform
 <br/>
