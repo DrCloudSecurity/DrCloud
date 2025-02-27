@@ -5,27 +5,25 @@ Welcome to Dr Cloud<p>
 My compendium of artifacts for IaC, AI/ML, Splunk, Docker, Python.
 > <br/>
 
- > [!TIP]
- > Contact me at davidalton1 [at] gmail.com
+> [!TIP]
+> Contact me at davidalton1 [at] gmail.com
 <br/>
 
 AI/ML
+
 <br/>
 
 [IaC](https://github.com/DrCloudSecurity/DrCloud/tree/main/IaC)
+
 <br/>
 
 Splunk
-<br/>
 
-CDK/Terraform
 <br/>
 
 [Python](https://github.com/DrCloudSecurity/DrCloud/tree/main/python)
+
 <br/>
 
 Splunk
-<br/>
-
-CDK/Terraform
 <br/>
