@@ -10,19 +10,17 @@ My compendium of artifacts for IaC, AI/ML, Splunk, Docker, Python.
 <br/>
 
 AI/ML
-
+- AI/ML artifacts
 <br/>
 
 [IaC](https://github.com/DrCloudSecurity/DrCloud/tree/main/IaC)
-
-<br/>
-
-Splunk
-
+- CDK and Terraform
 <br/>
 
 [Python](https://github.com/DrCloudSecurity/DrCloud/tree/main/python)
-
+- Search the firm's ORR (job listings)
+  - sort by date to get the new reqs at the top
+  - search job description field by keyword
 <br/>
 
 Splunk
