@@ -1,6 +1,6 @@
 # download a copy of the firm's ORR from Workday
 # do not select any filters, click ok, then download
-## search the report for keywords, only return the rows that match
+# search the report for keywords, only return the rows that match
 
 # this cleans up the firm's ORR listings by running a keyword search
 # on the 'job description' field
