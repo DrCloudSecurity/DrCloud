@@ -31,7 +31,7 @@ print(a)
 
 
 #  define dictionary, print entry
-D = {'a': "AI", 'c': "Cloud", 'w': "Arcturus"}
+D = {'a': "ai & ml", 'c': "Cloud", 'w': "Arcturus"}
 print(D['c'])
 
 
