@@ -14,8 +14,10 @@ import pandas as pd
 
 # dl report has a style error. this fixes it
 # if you are troubleshooting comment this out first
-# import warnings
-warnings.simplefilter("ignore")
+import warnings
+# warnings.simplefilter("ignore")
+warnings.filterwarnings("ignore", message="Workbook contains no default style", category=UserWarning)
+
 
 # search column_name, keep only those rows
 def search_column(file_path, column_name):
