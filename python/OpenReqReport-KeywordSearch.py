@@ -1,5 +1,6 @@
 # download a copy of the firm's ORR from Workday
 # do not select any filters, click ok, then download
+## search the report for keywords, only return the rows that match
 
 # this cleans up the firm's ORR listings by running a keyword search
 # on the 'job description' field
@@ -13,7 +14,8 @@ import pandas as pd
 
 # dl report has a style error. this fixes it
 # if you are troubleshooting comment this out first
-import warnings
+# import warnings
+warnings.simplefilter("ignore")
 
 # search column_name, keep only those rows
 def search_column(file_path, column_name):
