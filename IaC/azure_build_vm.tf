@@ -1,18 +1,18 @@
 # Create virtual machine
 
 # import resources we cannot change
-import {
-  to = azurerm_storage_account.example
-  id = "/subscriptions/<subscription id>/resourceGroups/myResourceGroup"
-}
+# import {
+  # to = azurerm_storage_account.example
+  # id = "/subscriptions/4f6a6eb9-27d0-4ed6-a31c-2bde135e2db6/resourceGroups/myResourceGroup"
+# }
 
 
 variable "prefix" {
   default = "tfvmex"
 }
 
-resource "azurerm_resource_group" "example" {
-  name     = "rg_sb_eastus_250496_1_174079058545"
+resource "azurerm_resource_group" "defaultrg" {
+  name     = "rg_sb_eastus_250496_1_174084373172"
   location = "eastus"
 }
 
