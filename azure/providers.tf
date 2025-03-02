@@ -15,5 +15,5 @@ provider "azurerm" {
   # disable access check
   resource_provider_registrations = "none"
   # need to update this w/every sandbox change
-  subscription_id                 = "4f6a6eb9-27d0-4ed6-a31c-2bde135e2db6"
+  subscription_id = "4f6a6eb9-27d0-4ed6-a31c-2bde135e2db6"
 }
