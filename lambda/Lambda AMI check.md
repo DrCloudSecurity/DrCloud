@@ -5,22 +5,25 @@ EventBridge and SNS tie this together.
 
 ### SNS topic
 - Create an SNS topic
-- Subscribe to the topic and approve the notice
+- Subscribe to the topic and approve the notice <p>
+![Image](https://github.com/user-attachments/assets/771f9e6f-8ad9-46c5-be13-cfadc84d9c1b)
+
+
 
 ### Lambda function
 - Looks for the EC2 instance launch
 - Pulls the AMI ID from the instance
 - Compares it to the list of approved AMIs
-- Alerts on unapproved AMIs
+- Alerts on unapproved AMIs<p>
 
 
 ### Deploy the function
-- set runtime to python
-- add the code below
-- add the SNS topic as an environment variable
+- Create a new function
+- Set runtime to python
+- Add the code below
+- Add the SNS topic as an environment variable
 
 ```
-# import libs
 import boto3
 import os
 
@@ -59,13 +62,20 @@ def lambda_handler(event, context):
         raise e
 ```
 
+<p>
+    ![Image](https://github.com/user-attachments/assets/53a9743f-88c3-4941-9be6-e341db5df9b3)
+</p>
 
 ### EventBridge
 - create a rule
 - source: aws events
-- target: Lambda, then select the new function
+- target: Lambda, then select the new function <p>
+![Image](https://github.com/user-attachments/assets/ecb4d192-f902-4240-bfa8-85de1d6a3fc7)
 
 
 ### Validation
 - Launch a new EC2 instance with an unapproved AMI and confirm you receive the email
-- Logs are in CloudWatch
+- Review logs in CloudWatch if there is a problem <p>
+
+![image](https://github.com/user-attachments/assets/ad2a38ea-49f0-4273-8cee-6342828c73e4)
+
