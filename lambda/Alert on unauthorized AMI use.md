@@ -21,7 +21,6 @@ EventBridge and SNS tie this together.
 - Create a new function
 - Set runtime to python
 - Add the code below
-- Add the SNS topic as an environment variable
 
 ```
 import boto3
@@ -31,7 +30,7 @@ ec2 = boto3.client('ec2')
 sns = boto3.client('sns')
 
 # approved AMIs
-APPROVED_AMIS = ['ami-1234567890abcdef0', 'ami-0987654321abcdef0']
+APPROVED_AMIS = ['ami-08b5b3a93ed654d19']
 
 SNS_TOPIC_ARN = os.environ['SNS_TOPIC_ARN']
 
@@ -61,13 +60,26 @@ def lambda_handler(event, context):
         print(f"Error: {e}")
         raise e
 ```
+- Add the SNS topic as an environment variable
 
 ![Image](https://github.com/user-attachments/assets/53a9743f-88c3-4941-9be6-e341db5df9b3)
 
+
 ### EventBridge
-- create a rule
-- source: aws events
-- target: Lambda, then select the new function <p>
+- Create a rule
+- Source: aws events
+- Target: Lambda, then select the new function
+- For the event pattern use this
+```
+{
+  "source": ["aws.ec2"],
+  "detail-type": ["EC2 Instance State-change Notification"],
+  "detail": {
+    "state": ["running"]
+  }
+}
+```
+
 ![Image](https://github.com/user-attachments/assets/ecb4d192-f902-4240-bfa8-85de1d6a3fc7)
 
 
