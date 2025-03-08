@@ -1,4 +1,4 @@
-This walks you through creating a Lambda function that checks if EC2 instances are created from approved AMIs.\
+This runbook walks through creating a Lambda function that checks if EC2 instances are created from approved AMIs.\
 A notification email will be sent when a new instance is out of compliance.\
 EventBridge and SNS tie this together.
 <br/>
@@ -62,9 +62,7 @@ def lambda_handler(event, context):
         raise e
 ```
 
-<p>
-    ![Image](https://github.com/user-attachments/assets/53a9743f-88c3-4941-9be6-e341db5df9b3)
-</p>
+![Image](https://github.com/user-attachments/assets/53a9743f-88c3-4941-9be6-e341db5df9b3)
 
 ### EventBridge
 - create a rule
@@ -76,6 +74,4 @@ def lambda_handler(event, context):
 ### Validation
 - Launch a new EC2 instance with an unapproved AMI and confirm you receive the email
 - Review logs in CloudWatch if there is a problem <p>
-
-![image](https://github.com/user-attachments/assets/ad2a38ea-49f0-4273-8cee-6342828c73e4)
-
+![Image](https://github.com/user-attachments/assets/b0e9373c-4ea2-4f75-9295-f9a1059737ce)
