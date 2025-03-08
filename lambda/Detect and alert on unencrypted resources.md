@@ -89,6 +89,7 @@ def lambda_handler(event, context):
 
 
 ### Create the SNS topic
+- Subscribe to the topic and approve it
 ![Image](https://github.com/user-attachments/assets/be89f119-ab56-47d6-bd31-50e89fcce140)
 
 ### Add the SNS topic as an environment variable to the Lambda
