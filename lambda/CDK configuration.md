@@ -1,8 +1,8 @@
 ## CDK Configuration for AMI check
 <p></p>
 
-#### The purpose of the other files is to illustrate how the services integrate.
-#### This feature will be implemented using Terraform/CDK as shown below.
+#### The other files illustrate how the services integrate.
+#### These features will be implemented using Terraform/CDK as shown below.
 
 ### start a new project, initialize
 ```
