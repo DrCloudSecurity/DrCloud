@@ -1,14 +1,42 @@
-// azure quick guide
+// azure getting started guide
 
 getting started w/new sandbox
+// clear cache
+az login --use-device-code
+// another option
+az account clear
+
 - run 'az login' to update creds
 - update providers.tf w/subscription
--terraform init
--terraform plan
+- update main.tf w/Resource Group
+terraform init
+terraform state list
+terraform state rm <old resource>
+terraform plan
 
 
 // import things we cannot change
-terraform import "azurerm_resource_group.build5nines_web" "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SCUS-prod-build5nines-web-rg"
+add a stanza to main.tf for the resource
+// show RG name
+az group show --name your-resource-group-name --query "{id:id}"
+// rum import, replacing the end with the output above
+terraform import azurerm_resource_group.example /subscriptions/{subscription-id}/resourceGroups/your-resource-group-name
+// verify
+terraform state list
+
+in import.tf change 'name' field to just the resource id
+// reconcile config
+terraform plan
+
+
+
+// rm resources you added
+terraform state list
+terraform state rm <name>
+
+
+terraform.exe import "rg_sb_eastus_250496_1_174084373172.M
+yResourceGroup" "/subscriptions/4f6a6eb9-27d0-4ed6-a31c-2bde135e2db6/resourceGroups/rg_sb_eastus_250496_1_174084373172"
 
 
 
@@ -28,6 +56,7 @@ terraform init/plan/apply
 
 
 vm creation
+sg: eastus
 vm: ubuntu
 disk: hdd
 size: B1,B2
