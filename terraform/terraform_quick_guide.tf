@@ -1,12 +1,15 @@
 # terraform quick guide
 
 
+# getting set up
+
+
 # clean things up when it gets drifty
 delete local state files
--.terraform
--terraform.lock.hcl
--terraform.tfstate
--terraform.tfstate.backup
+- .terraform
+- terraform.lock.hcl
+- terraform.tfstate
+- terraform.tfstate.backup
 -run terraform init to build new state
 
 
@@ -28,6 +31,7 @@ terraform state list
 
 print resource details
 terraform show state <resource>
+
 
 prints the var value after terraform apply completes
 output "public_ip" {
