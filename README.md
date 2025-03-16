@@ -6,7 +6,7 @@ As an AWS Cloud Security expert, I'm passionate about securing cloud environment
 > <br/>
 
 > [!TIP]
-> Contact me at davidalton1 [at] gmail.com
+> Interesting work is highlighted below.
 <br/>
 
 [Lambda](https://github.com/DrCloudSecurity/DrCloud/tree/main/lambda)
