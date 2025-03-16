@@ -1,11 +1,11 @@
-# terraform quick guide
+terraform quick guide
 
 
-# getting set up
+getting set up
 
 
-# clean things up when it gets drifty
-delete local state files
+clean things up when it gets drifty
+- delete local state files
 - .terraform
 - terraform.lock.hcl
 - terraform.tfstate
@@ -15,6 +15,7 @@ delete local state files
 
 aws resource list
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+
 
 the basics
 terraform init          Prepare your working directory for other commands
@@ -31,7 +32,6 @@ terraform state list
 
 print resource details
 terraform show state <resource>
-
 
 prints the var value after terraform apply completes
 output "public_ip" {
@@ -53,7 +53,6 @@ terraform destroy -target aws_instance.webserver
 
 add a specifc resource
 terraform apply -target aws_instance.web
-
 
 
 assign var from cli
@@ -84,3 +83,41 @@ locals {
         admin = "password"
       }
 }
+
+
+data types
+Collection
+- list: ordered group of elements
+- set: unordered group of unique elements
+- map: key=value pair
+structural
+-allow you to mix data types stored
+-tuple: equivalent to list
+-object: equivalent to maps
+Other
+any: unknown type, list(any)
+null: absence of value
+
+list ex
+["us-east-1", "us-west-2"]
+
+map ex
+{
+        small = "t2.micro"
+        medium = "t2.small"
+        large = "t2.large"
+}
+
+reference collection values
+var.<name_label>[<element_number>]
+var.aws_regions[0]
+
+
+
+supplying inputs
+
+constructing values
+
+specifying outputs
+
+validate config
