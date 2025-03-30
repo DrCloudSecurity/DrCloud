@@ -3,9 +3,11 @@ import pandas as pd
 
 
 # prompt for file
-input_file = input("Enter the Excel file name: ")
+input_file = input("Enter Excel file name: ")
+
 # prompt for keyword
 keyword = input("Enter keyword to search in 'Job Description': ")
+
 # output file
 output_file = "ORR_cleaned_up.xlsx"
 
@@ -28,7 +30,7 @@ filtered_df = df[df["Job Description"].str.contains(keyword, case=False, na=Fals
 filtered_df = filtered_df.sort_values(by="Recruiting Start Date", ascending=False)
 
 
-# remove columns that get in the way
+# remove columns that we do not need
 filtered_df = filtered_df.drop(columns=["Posted Internally Only", "Team", "IMT", "Job Profile", "Job Requisition Status"], errors='ignore')
 
 
