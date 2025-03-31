@@ -64,6 +64,20 @@ variable file
 -add variables to the file
 -terraform will check the file for vars when run
 
+example:
+--------------------------------------
+variable "aws_access_key" {
+        type = string
+        description = "aws access key"
+        sensitive = true
+}
+variable "aws_secret_key" {
+        type = string
+        description = "aws secret key"
+        sensitive = true
+}
+--------------------------------------
+
 
 reference a custom variable file (.tfvars)
 -create file example.tfvars
@@ -98,10 +112,12 @@ Other
 any: unknown type, list(any)
 null: absence of value
 
-list ex
+
+list example
 ["us-east-1", "us-west-2"]
 
-map ex
+
+map example
 {
         small = "t2.micro"
         medium = "t2.small"
@@ -114,10 +130,8 @@ var.aws_regions[0]
 
 
 
+
 supplying inputs
-
 constructing values
-
 specifying outputs
-
 validate config
